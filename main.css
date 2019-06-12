@@ -1,6 +1,7 @@
 body {
   background-image: url("6nrOp45.png");
-  background-repeat: repeat;
+  background-repeat: repeat-y;
+  background-size: 100%;
   background-position: top;
   background-attachment: fixed;
   display: flex;
