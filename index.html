@@ -12,11 +12,25 @@
       <p style="color: black">My favorite number is <del>67</del> <ins>15</ins>! What's yours?</p>
       <div class="inputSection">
         <div class="inputs">
-          <input placeholder="something"><kbd><br>Write your favorite number here</kbd></input>
-          <input placeholder="nothing"><kbd><br>Don't write anything here</kbd></input>
+          <kbd><br>Write your favorite number here:</br></kbd>
+          <input placeholder="something"></input>
       </div>
       <button class="addOption">Add</button>
     </div>
+    <div class="resultSection"></div>
     <button>Go!</button>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+      $(function(){
+          $('.resultSection').hide()
+
+          var add_option = function() {
+            $('.inputs').append('<input></input>')
+          }
+
+          $('.addOption').click(add_option)
+      })
+    </script>
   </body>
 </html>
