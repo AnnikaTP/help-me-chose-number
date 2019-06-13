@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 150px;
-  color: #533034;
+  color: #532000;
   font-size: 20px
 }
 
@@ -18,6 +18,12 @@ h1 {
   font-size: 40px;
   letter-spacing: 2px;
   margin-bottom: 0px;
+  color: #67605f
+}
+
+p {
+  color: red
+  justify:top;
 }
 
 .inputSection {
@@ -44,6 +50,7 @@ button {
   border: none;
   border-radius: 12px;
   color: white;
+  font-weight: bold;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
