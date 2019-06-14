@@ -5,12 +5,13 @@
     <title>Help me choose number</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
-    <h1>Help me choose between numbers ...</h1>
+  <body class="click">
+    <div class="h1Section">
+    <h1>Help me choose between numbers ...</h1></div>
     <p>My house needs a number.<br>The whole street is mine, so I can choose any number, but I having hard time and can't choose.<br>I need help with my choice.</p>
   <img src="67 Malta 2008fyrk500px.png" alt="number67Malta" width="100">
       <p style="color: black">My favorite number is <del>67</del> <ins>15</ins>! What's yours?</p>
-      <div class="inputSection">
+        <div class="inputSection">
         <div class="inputs">
           <kbd><br>Write your favorite number here:</br></kbd>
           <input placeholder="something"></input>
@@ -18,18 +19,31 @@
       <button class="addOption">Add</button>
     </div>
     <div class="resultSection"></div>
-    <button>Go!</button>
+    <button class="submit">Go!</button>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
-      $(function(){
-          $('.resultSection').hide()
+      $(function() {
+        $('.resultSection').hide()
 
-          var add_option = function() {
-            $('.inputs').append('<input></input>')
-          }
+        var add_option = function() {
+          $('.inputs').append('<input></input>')
+        }
+        $('.addOption').click(add_option)
 
-          $('.addOption').click(add_option)
+        var options = []
+        var submit = function() {
+          $('.inputSection').hide()
+          $('.resultSection').css('display','flex')
+          $('input').each(function() {
+            options.push($(this).val())
+          })
+          var winner = options[Math.floor(Math.random() * options.length)]
+          console.log(winner)
+          $('.h1Section').hide()
+          $('.resultSection').text(winner)
+        }
+        $('.submit').click(submit)
       })
     </script>
   </body>

@@ -45,6 +45,15 @@ input {
   margin-top: 10px;
 }
 
+.resultSection {
+  height: 200px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  font-size: 150px;
+  font-weight: bold;
+}
+
 button {
   background-color: #67605f;
   border: none;
