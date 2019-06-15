@@ -14,11 +14,11 @@ body {
 }
 
 h1 {
-  font-weight: lighter;
-  font-size: 40px;
+  font-size: 45px;
   letter-spacing: 2px;
   margin-bottom: 0px;
-  color: #67605f
+  color: darkred
+  font-weight: lighter;
 }
 
 p {
@@ -51,7 +51,6 @@ input {
   justify-content:center;
   align-items: center;
   font-size: 150px;
-  font-weight: bold;
 }
 
 button {

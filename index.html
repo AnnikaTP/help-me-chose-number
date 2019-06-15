@@ -9,8 +9,8 @@
     <div class="h1Section">
     <h1>Help me choose between numbers ...</h1></div>
     <p>My house needs a number.<br>The whole street is mine, so I can choose any number, but I having hard time and can't choose.<br>I need help with my choice.</p>
-  <img src="67 Malta 2008fyrk500px.png" alt="number67Malta" width="100">
-      <p style="color: black">My favorite number is <del>67</del> <ins>15</ins>! What's yours?</p>
+      <p style="color: black">My favorite number is <del>15</del> <ins>67</ins>! What's yours?</p>
+        <img src="67 Malta 2008fyrk500px.png" alt="number67Malta" width="100">
         <div class="inputSection">
         <div class="inputs">
           <kbd><br>Write your favorite number here:</br></kbd>
@@ -40,7 +40,10 @@
           })
           var winner = options[Math.floor(Math.random() * options.length)]
           console.log(winner)
-          $('.h1Section').hide()
+          if ($('input').is(':empty')) {
+              alert('Input can not be left blank');
+          }
+          $('h1').text('Resultatet blev:')
           $('.resultSection').text(winner)
         }
         $('.submit').click(submit)
